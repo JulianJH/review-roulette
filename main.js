@@ -57,7 +57,9 @@ async function fetchRandomReviewFromMoviePage(movieUrl) {
       .map(reviewDiv => reviewDiv.innerText)
       .filter(review=>(review.length<maxReviewLength && !review.toLowerCase().includes(movieName)));
 
-    return reviews[Math.floor(Math.random() * reviews.length)];
+    const review = pickRandom(reviews, 1);
+
+    return review;
   } catch {
     return null;
   }
