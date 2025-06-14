@@ -84,7 +84,7 @@ function fetchReviews(movieLinks) {
         const reviewsDoc = new DOMParser().parseFromString(html, 'text/html');
         const movieName = reviewsDoc.querySelectorAll('div.contextual-title > h1 > a')[0].innerText.toLowerCase();
 
-        const reviews = Array.from(reviewsDoc.querySelectorAll('li.film-detail > div.film-detail-content > div > div.body-text:not([hidden])'))
+        const reviews = Array.from(reviewsDoc.querySelectorAll('div.js-review > div.body-text:not([hidden])'))
           .map(reviewDiv => reviewDiv.innerText)
           .filter(review => (review.length < maxReviewLength && !review.toLowerCase().includes(movieName)));
 
