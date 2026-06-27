@@ -1,4 +1,12 @@
 const form = document.getElementById("watchlistForm");
+const hoursModeToggle = document.getElementById("hoursModeToggle");
+
+chrome.storage.sync.get({ hoursMode: false }, ({ hoursMode }) => {
+  hoursModeToggle.checked = hoursMode;
+});
+hoursModeToggle.addEventListener("change", () => {
+  chrome.storage.sync.set({ hoursMode: hoursModeToggle.checked });
+});
 const input = document.getElementById("usernameInput");
 const spinner = document.getElementById("spinner");
 const results = document.getElementById("results");
@@ -23,8 +31,8 @@ form.addEventListener("submit", (e) => {
     }
 
     const watchlistDoc = new DOMParser().parseFromString(html, 'text/html');
-    const movieLinks = Array.from(watchlistDoc.querySelectorAll('ul.poster-list > li.poster-container > div'))
-      .map(moviePosterDiv => 'https://letterboxd.com' + moviePosterDiv.getAttribute('data-target-link'));
+    const movieLinks = Array.from(watchlistDoc.querySelectorAll('[data-target-link]'))
+      .map(movieElement => 'https://letterboxd.com' + movieElement.getAttribute('data-target-link'));
 
     const randomMovies = pickRandom(movieLinks, 3);
 
@@ -82,11 +90,17 @@ function fetchReviews(movieLinks) {
         }
 
         const reviewsDoc = new DOMParser().parseFromString(html, 'text/html');
-        const movieName = reviewsDoc.querySelectorAll('div.contextual-title > h1 > a')[0].innerText.toLowerCase();
+        console.log(reviewsDoc);
+        const movieName = "";
+        try {
+          reviewsDoc.querySelectorAll('div.contextual-title > h1 > a')[0].innerText.toLowerCase();
+        } catch (error) {
+          
+        }
 
         const reviews = Array.from(reviewsDoc.querySelectorAll('div.js-review > div.body-text:not([hidden])'))
           .map(reviewDiv => reviewDiv.innerText)
-          .filter(review => (review.length < maxReviewLength && !review.toLowerCase().includes(movieName)));
+          .filter(review => (review.length < maxReviewLength && (movieName == "" || !review.toLowerCase().includes(movieName))));
 
         if (reviews.length === 0) {
           resolve(null); // Resolve with null if no reviews found
