@@ -56,16 +56,17 @@ form.addEventListener("submit", (e) => {
 });
 
 function showError(error) {
-  results.innerHTML = "<span style='color: red;'>"+error+"</span>";
+  results.innerHTML = "<span class='error'>"+error+"</span>";
 }
 
 function renderReviews(reviewData) {
   results.innerHTML = '';
   reviewData.forEach(({ review, url }, i) => {
-    const card = document.createElement('div');
+    const card = document.createElement('button');
+    card.type = 'button';
     card.className = 'review-card';
-    card.innerHTML = `<p>${review}</p><button>Pick This One</button>`;
-    card.querySelector('button').addEventListener('click', () => {
+    card.innerHTML = `<p>${review}</p><span class="review-card-cta">Pick this one &rarr;</span>`;
+    card.addEventListener('click', () => {
       window.open(url, '_blank');
     });
     results.appendChild(card);
@@ -91,11 +92,11 @@ function fetchReviews(movieLinks) {
 
         const reviewsDoc = new DOMParser().parseFromString(html, 'text/html');
         console.log(reviewsDoc);
-        const movieName = "";
+        let movieName = "";
         try {
-          reviewsDoc.querySelectorAll('div.contextual-title > h1 > a')[0].innerText.toLowerCase();
+          movieName = reviewsDoc.querySelectorAll('div.contextual-title > h1 > a')[0].innerText.toLowerCase();
         } catch (error) {
-          
+
         }
 
         const reviews = Array.from(reviewsDoc.querySelectorAll('div.js-review > div.body-text:not([hidden])'))

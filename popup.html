@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8" />
   <title>Letterboxd Roulette</title>
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
+  <div class="header">
+    <h1>Review<span class="accent">Roulette</span></h1>
+    <p class="subtitle">Random reviews from your watchlist.</p>
+  </div>
+
   <form id="watchlistForm">
-    <input id="usernameInput" type="text" placeholder="Enter Letterboxd username"/>
-    <button type="submit">Load</button>
+    <label class="field-label" for="usernameInput">Letterboxd Username</label>
+    <input id="usernameInput" type="text" placeholder="e.g. noahbaumbach" autocomplete="off" autocapitalize="none" spellcheck="false" />
+    <button type="submit">Spin the Reviews &rarr;</button>
   </form>
-  <label style="display:flex;align-items:center;gap:6px;margin:4px 0;font-size:13px;">
-    <input type="checkbox" id="hoursModeToggle"> Show durations in hours on Letterboxd
+
+  <label class="toggle-row">
+    <input type="checkbox" id="hoursModeToggle">
+    Show runtimes in hours on Letterboxd pages
   </label>
-  <hr>
+
   <div id="spinner" style="display: none;"><div class="spinner"></div></div>
   <div id="results"></div>
   <script src="popup.js"></script>

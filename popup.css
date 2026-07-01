@@ -1,24 +1,179 @@
-body {
-  font-family: sans-serif;
-  padding: 10px;
-  width: 300px;
+:root {
+  --lb-bg: #0f0f0f;
+  --lb-surface: #1a1a1a;
+  --lb-card: #242424;
+  --lb-border: #2e2e2e;
+  --lb-accent: #00c030;
+  --lb-accent-dim: #009020;
+  --lb-muted: #6b7280;
+  --lb-text: #e8e8e8;
+  --lb-text-dim: #9ca3af;
 }
 
-input, button {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  padding: 16px;
+  background: var(--lb-bg);
+  color: var(--lb-text);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--lb-text);
+}
+
+.header h1 .accent {
+  color: var(--lb-accent);
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--lb-text-dim);
+}
+
+.field-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--lb-text-dim);
+  margin-bottom: 6px;
+}
+
+input[type="text"] {
   width: 100%;
   box-sizing: border-box;
-  padding: 8px;
-  margin: 5px 0;
+  padding: 10px 12px;
+  margin: 0 0 10px;
+  background: var(--lb-card);
+  border: 1px solid var(--lb-border);
+  border-radius: 10px;
+  color: var(--lb-text);
+  font-size: 14px;
+  transition: border-color 0.15s ease;
+}
+
+input[type="text"]::placeholder {
+  color: var(--lb-muted);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--lb-accent);
+}
+
+button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  background: var(--lb-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: var(--lb-accent-dim);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 4px;
+  font-size: 12px;
+  color: var(--lb-text-dim);
+}
+
+.toggle-row input {
+  accent-color: var(--lb-accent);
+}
+
+#results {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--lb-card);
+  border: 1px solid var(--lb-border);
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.review-card:hover {
+  border-color: var(--lb-accent);
+  background: var(--lb-surface);
+}
+
+.review-card:active {
+  transform: scale(0.99);
+}
+
+.review-card p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--lb-text);
+  white-space: pre-line;
+}
+
+.review-card-cta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lb-accent);
+}
+
+.error {
+  color: #f87171;
+  font-size: 13px;
 }
 
 .spinner {
-  width: 24px;
-  height: 24px;
-  border: 3px solid #ccc;
-  border-top-color: #000;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--lb-border);
+  border-top-color: var(--lb-accent);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
-  margin: 10px auto;
+  margin: 14px auto;
 }
 
 @keyframes spin {
