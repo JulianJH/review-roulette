@@ -3,11 +3,11 @@
 
   <!-- roulette wheel, enlarged and centered for legibility at small sizes -->
   <circle cx="32" cy="32" r="24" fill="#3a3a3a" stroke="#4a4a4a" stroke-width="2"/>
-  <path d="M32 32 L32 8 A24 24 0 0 1 52.8 20 Z" fill="#ff8000"/>
+  <path d="M32 32 L32 8 A24 24 0 0 1 52.8 20 Z" fill="#00e054"/>
   <path d="M32 32 L52.8 20 A24 24 0 0 1 52.8 44 Z" fill="#3a3a3a"/>
-  <path d="M32 32 L52.8 44 A24 24 0 0 1 32 56 Z" fill="#ff8000"/>
+  <path d="M32 32 L52.8 44 A24 24 0 0 1 32 56 Z" fill="#00e054"/>
   <path d="M32 32 L32 56 A24 24 0 0 1 11.2 44 Z" fill="#3a3a3a"/>
-  <path d="M32 32 L11.2 44 A24 24 0 0 1 11.2 20 Z" fill="#ff8000"/>
+  <path d="M32 32 L11.2 44 A24 24 0 0 1 11.2 20 Z" fill="#00e054"/>
   <path d="M32 32 L11.2 20 A24 24 0 0 1 32 8 Z" fill="#3a3a3a"/>
 
   <!-- roulette balls, in letterboxd's trio colors -->

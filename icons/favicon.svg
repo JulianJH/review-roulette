@@ -6,17 +6,17 @@
     <circle cx="32" cy="27" r="19" fill="#3a3a3a" stroke="#4a4a4a" stroke-width="1.5"/>
 
     <!-- alternating wheel pockets, 12 thin wedges like a real roulette rim -->
-    <path d="M32 27 L32 8 A19 19 0 0 1 41.5 10.55 Z" fill="#ff8000"/>
+    <path d="M32 27 L32 8 A19 19 0 0 1 41.5 10.55 Z" fill="#00e054"/>
     <path d="M32 27 L41.5 10.55 A19 19 0 0 1 48.45 17.5 Z" fill="#3a3a3a"/>
-    <path d="M32 27 L48.45 17.5 A19 19 0 0 1 51 27 Z" fill="#ff8000"/>
+    <path d="M32 27 L48.45 17.5 A19 19 0 0 1 51 27 Z" fill="#00e054"/>
     <path d="M32 27 L51 27 A19 19 0 0 1 48.45 36.5 Z" fill="#3a3a3a"/>
-    <path d="M32 27 L48.45 36.5 A19 19 0 0 1 41.5 43.45 Z" fill="#ff8000"/>
+    <path d="M32 27 L48.45 36.5 A19 19 0 0 1 41.5 43.45 Z" fill="#00e054"/>
     <path d="M32 27 L41.5 43.45 A19 19 0 0 1 32 46 Z" fill="#3a3a3a"/>
-    <path d="M32 27 L32 46 A19 19 0 0 1 22.5 43.45 Z" fill="#ff8000"/>
+    <path d="M32 27 L32 46 A19 19 0 0 1 22.5 43.45 Z" fill="#00e054"/>
     <path d="M32 27 L22.5 43.45 A19 19 0 0 1 15.55 36.5 Z" fill="#3a3a3a"/>
-    <path d="M32 27 L15.55 36.5 A19 19 0 0 1 13 27 Z" fill="#ff8000"/>
+    <path d="M32 27 L15.55 36.5 A19 19 0 0 1 13 27 Z" fill="#00e054"/>
     <path d="M32 27 L13 27 A19 19 0 0 1 15.55 17.5 Z" fill="#3a3a3a"/>
-    <path d="M32 27 L15.55 17.5 A19 19 0 0 1 22.5 10.55 Z" fill="#ff8000"/>
+    <path d="M32 27 L15.55 17.5 A19 19 0 0 1 22.5 10.55 Z" fill="#00e054"/>
     <path d="M32 27 L22.5 10.55 A19 19 0 0 1 32 8 Z" fill="#3a3a3a"/>
 
     <!-- pocket dividers -->
