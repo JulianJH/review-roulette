@@ -1,13 +1,13 @@
 :root {
-  --lb-bg: #0f0f0f;
-  --lb-surface: #1a1a1a;
-  --lb-card: #242424;
-  --lb-border: #2e2e2e;
-  --lb-accent: #00c030;
-  --lb-accent-dim: #009020;
-  --lb-muted: #6b7280;
-  --lb-text: #e8e8e8;
-  --lb-text-dim: #9ca3af;
+  --lb-bg: #12201e;
+  --lb-surface: #1a2e2b;
+  --lb-card: #203a35;
+  --lb-border: #3f5d55;
+  --lb-accent: #e08a1e;
+  --lb-accent-dim: #b96f16;
+  --lb-muted: #5f8a80;
+  --lb-text: #fef6e4;
+  --lb-text-dim: #e6dcc6;
 }
 
 * {
@@ -42,9 +42,10 @@ body {
 
 .header h1 {
   margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--lb-text);
 }
 
@@ -75,7 +76,7 @@ input[type="text"] {
   margin: 0 0 10px;
   background: var(--lb-card);
   border: 1px solid var(--lb-border);
-  border-radius: 10px;
+  border-radius: 6px;
   color: var(--lb-text);
   font-size: 14px;
   transition: border-color 0.15s ease;
@@ -95,7 +96,7 @@ button {
   box-sizing: border-box;
   padding: 11px;
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
   background: var(--lb-accent);
   color: #fff;
   font-weight: 700;
@@ -138,7 +139,7 @@ button:active {
   text-align: left;
   background: var(--lb-card);
   border: 1px solid var(--lb-border);
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 12px;
   cursor: pointer;
   font: inherit;
