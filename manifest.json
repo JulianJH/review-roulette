@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Letterboxd Review Roulette",
+  "name": "Review Roulette",
   "version": "1.0",
   "description": "Pick random movies from your Letterboxd watchlist by blind review.",
   "action": {
