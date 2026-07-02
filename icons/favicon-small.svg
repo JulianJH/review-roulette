@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0f0f0f"/>
+  <rect width="64" height="64" rx="14" fill="#14181c"/>
 
   <!-- roulette wheel, enlarged and centered for legibility at small sizes -->
   <circle cx="32" cy="32" r="24" fill="#3a3a3a" stroke="#4a4a4a" stroke-width="2"/>
-  <path d="M32 32 L32 8 A24 24 0 0 1 52.8 20 Z" fill="#00c030"/>
+  <path d="M32 32 L32 8 A24 24 0 0 1 52.8 20 Z" fill="#ff8000"/>
   <path d="M32 32 L52.8 20 A24 24 0 0 1 52.8 44 Z" fill="#3a3a3a"/>
-  <path d="M32 32 L52.8 44 A24 24 0 0 1 32 56 Z" fill="#00c030"/>
+  <path d="M32 32 L52.8 44 A24 24 0 0 1 32 56 Z" fill="#ff8000"/>
   <path d="M32 32 L32 56 A24 24 0 0 1 11.2 44 Z" fill="#3a3a3a"/>
-  <path d="M32 32 L11.2 44 A24 24 0 0 1 11.2 20 Z" fill="#00c030"/>
+  <path d="M32 32 L11.2 44 A24 24 0 0 1 11.2 20 Z" fill="#ff8000"/>
   <path d="M32 32 L11.2 20 A24 24 0 0 1 32 8 Z" fill="#3a3a3a"/>
 
   <!-- roulette balls, in letterboxd's trio colors -->
@@ -16,8 +16,8 @@
   <circle cx="17.2" cy="46.8" r="2.8" fill="#40bcf4"/>
 
   <!-- bold review speech bubble, centered hub -->
-  <circle cx="32" cy="32" r="11" fill="#0f0f0f"/>
+  <circle cx="32" cy="32" r="11" fill="#14181c"/>
   <path d="M23.5 26.5h17a2.3 2.3 0 0 1 2.3 2.3v6.8a2.3 2.3 0 0 1-2.3 2.3h-10.4l-4.2 3.6v-3.6h-2.4a2.3 2.3 0 0 1-2.3-2.3v-6.8a2.3 2.3 0 0 1 2.3-2.3Z" fill="#e8e8e8"/>
-  <line x1="25.5" y1="30.6" x2="38.5" y2="30.6" stroke="#0f0f0f" stroke-width="1.3"/>
-  <line x1="25.5" y1="33.5" x2="34.5" y2="33.5" stroke="#0f0f0f" stroke-width="1.3"/>
+  <line x1="25.5" y1="30.6" x2="38.5" y2="30.6" stroke="#14181c" stroke-width="1.3"/>
+  <line x1="25.5" y1="33.5" x2="34.5" y2="33.5" stroke="#14181c" stroke-width="1.3"/>
 </svg>
